@@ -24,6 +24,7 @@ extension Location {
   @NSManaged public var placemark: CLPlacemark?
     
     @NSManaged public var photoID: NSNumber?
+    
 }
 
 extension Location: Identifiable {}
