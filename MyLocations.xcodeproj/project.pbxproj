@@ -22,6 +22,7 @@
 		53DDE44F26ED9487001C428E /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDE44E26ED9487001C428E /* CategoryPickerViewController.swift */; };
 		53DDE45126ED9CBD001C428E /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDE45026ED9CBD001C428E /* HudView.swift */; };
 		53F97D8C26F8AB66007AA09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F97D8A26F8AB66007AA09C /* Main.storyboard */; };
+		53F97D8E26F8B3F4007AA09C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F97D8D26F8B3F4007AA09C /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		53DDE44E26ED9487001C428E /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		53DDE45026ED9CBD001C428E /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		53F97D8B26F8AB66007AA09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Downloads/chapter-28-final/MyLocations/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		53F97D8D26F8B3F4007AA09C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				533E7D6326ED808600A33734 /* LocationDetailsViewController.swift */,
 				538C58A226F80F370008F511 /* LocationsViewController.swift */,
 				53F97D8A26F8AB66007AA09C /* Main.storyboard */,
+				53F97D8D26F8B3F4007AA09C /* MapViewController.swift */,
 				538C589526F7B8790008F511 /* MyLocations.xcdatamodeld */,
 				533E7D5126ED61B800A33734 /* SceneDelegate.swift */,
 			);
@@ -170,6 +173,7 @@
 				53DDE45126ED9CBD001C428E /* HudView.swift in Sources */,
 				538C58A326F80F370008F511 /* LocationsViewController.swift in Sources */,
 				538C589B26F7B9B00008F511 /* Location+CoreDataProperties.swift in Sources */,
+				53F97D8E26F8B3F4007AA09C /* MapViewController.swift in Sources */,
 				538C58A526F829340008F511 /* LocationCell.swift in Sources */,
 				533E7D5026ED61B800A33734 /* AppDelegate.swift in Sources */,
 				538C589A26F7B9B00008F511 /* Location+CoreDataClass.swift in Sources */,

@@ -60,10 +60,12 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       locationManager.requestWhenInUseAuthorization()
       return
     }
+    
     if authStatus == .denied || authStatus == .restricted {
       showLocationServicesDeniedAlert()
       return
     }
+    
     if updatingLocation {
       stopLocationManager()
     } else {
@@ -95,6 +97,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
       tagButton.isHidden = false
       messageLabel.text = ""
+        
       // Address
       if let placemark = placemark {
         addressLabel.text = string(from: placemark)
@@ -110,6 +113,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       longitudeLabel.text = ""
       addressLabel.text = ""
       tagButton.isHidden = true
+        
       // Message
       let statusMessage: String
       if let error = lastLocationError as NSError? {
@@ -189,6 +193,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
   }
 
   // MARK: - CLLocationManagerDelegate
+    
   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
     if (error as NSError).code == CLError.locationUnknown.rawValue {
       return

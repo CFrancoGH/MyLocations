@@ -41,6 +41,7 @@ class LocationsViewController: UITableViewController {
   }
 
   // MARK: - Navigation
+    
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "EditLocation" {
       let controller = segue.destination as! LocationDetailsViewController
@@ -54,6 +55,7 @@ class LocationsViewController: UITableViewController {
   }
 
   // MARK: - Helper methods
+    
   func performFetch() {
     do {
       try fetchedResultsController.performFetch()
@@ -63,6 +65,7 @@ class LocationsViewController: UITableViewController {
   }
 
   // MARK: - Table View Delegates
+    
   override func numberOfSections(in tableView: UITableView) -> Int {
     return fetchedResultsController.sections!.count
   }
@@ -102,6 +105,7 @@ class LocationsViewController: UITableViewController {
 }
 
 // MARK: - NSFetchedResultsController Delegate Extension
+
 extension LocationsViewController: NSFetchedResultsControllerDelegate {
   func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
     print("*** controllerWillChangeContent")

@@ -54,6 +54,7 @@ class LocationDetailsViewController: UITableViewController {
     }
 
     dateLabel.text = format(date: date)
+    
     // Hide keyboard
     let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
     gestureRecognizer.cancelsTouchesInView = false
@@ -61,6 +62,7 @@ class LocationDetailsViewController: UITableViewController {
   }
 
   // MARK: - Navigation
+    
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "PickCategory" {
       let controller = segue.destination as! CategoryPickerViewController
@@ -69,6 +71,7 @@ class LocationDetailsViewController: UITableViewController {
   }
 
   // MARK: - Actions
+    
   @IBAction func done() {
     guard let mainView = navigationController?.parent?.view else { return }
     let hudView = HudView.hud(inView: mainView, animated: true)
@@ -110,6 +113,7 @@ class LocationDetailsViewController: UITableViewController {
   }
 
   // MARK: - Helper Methods
+    
   func string(from placemark: CLPlacemark) -> String {
     var text = ""
 
@@ -149,6 +153,7 @@ class LocationDetailsViewController: UITableViewController {
   }
 
   // MARK: - Table View Delegates
+    
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     if indexPath.section == 0 || indexPath.section == 1 {
       return indexPath

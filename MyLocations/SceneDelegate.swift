@@ -25,6 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       navController = tabViewControllers[1] as! UINavigationController
       let controller2 = navController.viewControllers.first as! LocationsViewController
       controller2.managedObjectContext = managedObjectContext
+        
+      // Third tab
+      navController = tabViewControllers[2] as! UINavigationController
+      let controller3 = navController.viewControllers.first as! MapViewController
+      controller3.managedObjectContext = managedObjectContext
     }
     listenForFatalCoreDataNotifications()
   }
@@ -61,6 +66,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
   // MARK: - Core Data stack
+    
   lazy var persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: "MyLocations")
     container.loadPersistentStores {_, error in
@@ -72,6 +78,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }()
 
   // MARK: - Core Data Saving support
+    
   func saveContext() {
     let context = persistentContainer.viewContext
     if context.hasChanges {
@@ -87,6 +94,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
   // MARK: - Helper methods
+    
   func listenForFatalCoreDataNotifications() {
     // 1
     NotificationCenter.default.addObserver(
