@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   }
     
-    func customizeAppearance() {
+    func customizeAppearance() {    //Sets color of tab bar items to yellow
         //tab bar
         let tintColor = UIColor(
             red: 255 / 255.0,
