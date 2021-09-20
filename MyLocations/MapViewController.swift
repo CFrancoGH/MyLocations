@@ -111,6 +111,9 @@ class MapViewController: UIViewController {
   }
 }
 
+
+//MARK: - Extension
+
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     guard annotation is Location else {
