@@ -10,8 +10,7 @@ import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
-  
-    lazy var managedObjectContext = persistentContainer.viewContext
+  lazy var managedObjectContext = persistentContainer.viewContext
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     let tabController = window!.rootViewController as! UITabBarController
@@ -19,14 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
       // First tab
       var navController = tabViewControllers[0] as! UINavigationController
-      let controller1 = navController.viewControllers.first
-        as! CurrentLocationViewController
+      let controller1 = navController.viewControllers.first as! CurrentLocationViewController
       controller1.managedObjectContext = managedObjectContext
         
       // Second tab
       navController = tabViewControllers[1] as! UINavigationController
-      let controller2 = navController.viewControllers.first
-        as! LocationsViewController
+      let controller2 = navController.viewControllers.first as! LocationsViewController
       controller2.managedObjectContext = managedObjectContext
     }
     listenForFatalCoreDataNotifications()

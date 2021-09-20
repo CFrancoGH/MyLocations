@@ -17,34 +17,30 @@ class LocationDetailsViewController: UITableViewController {
   @IBOutlet weak var addressLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
 
-    var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    var placemark: CLPlacemark?
-    var categoryName = "No Category"
-    var managedObjectContext: NSManagedObjectContext!
-    var date = Date()
-    
-    var locationToEdit: Location? {
-        didSet {
-            if let location = locationToEdit {
-                descriptionText = location.locationDescription
-                categoryName = location.category
-                date = location.date
-                coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
-                placemark = location.placemark
-            }
-        }
+  var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+  var placemark: CLPlacemark?
+  var categoryName = "No Category"
+  var managedObjectContext: NSManagedObjectContext!
+  var date = Date()
+  var descriptionText = ""
+
+  var locationToEdit: Location? {
+    didSet {
+      if let location = locationToEdit {
+        descriptionText = location.locationDescription
+        categoryName = location.category
+        date = location.date
+        coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+        placemark = location.placemark
+      }
     }
-    
-    var descriptionText = ""
-    
-    
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     if let location = locationToEdit {
-        title = "Edit Location"
+      title = "Edit Location"
     }
-
     descriptionTextView.text = descriptionText
     categoryLabel.text = categoryName
 
@@ -76,17 +72,16 @@ class LocationDetailsViewController: UITableViewController {
   @IBAction func done() {
     guard let mainView = navigationController?.parent?.view else { return }
     let hudView = HudView.hud(inView: mainView, animated: true)
-    
 
     let location: Location
     if let temp = locationToEdit {
-        hudView.text = "Updated"
-        location = temp
+      hudView.text = "Updated"
+      location = temp
     } else {
-        hudView.text = "Tagged"
-        location = Location(context: managedObjectContext)
+      hudView.text = "Tagged"
+      location = Location(context: managedObjectContext)
     }
-    
+
     location.locationDescription = descriptionTextView.text
     location.category = categoryName
     location.latitude = coordinate.latitude
