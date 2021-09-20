@@ -24,8 +24,8 @@
 		53F97D9326F8D4E8007AA09C /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F97D9226F8D4E8007AA09C /* UIImage+Resize.swift */; };
 		53F97D9526F8D677007AA09C /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F97D9426F8D677007AA09C /* String+AddText.swift */; };
 		53F97D9726F8DA10007AA09C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F97D9626F8DA10007AA09C /* Assets.xcassets */; };
-		53F97D9A26F8E314007AA09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F97D9826F8E314007AA09C /* Main.storyboard */; };
-		53F97D9C26F8E554007AA09C /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 53F97D9B26F8E554007AA09C /* Sound */; };
+		53F97DA226F8F746007AA09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F97DA026F8F746007AA09C /* Main.storyboard */; };
+		53F97DA426F8F885007AA09C /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 53F97DA326F8F885007AA09C /* Sound */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +48,8 @@
 		53F97D9226F8D4E8007AA09C /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		53F97D9426F8D677007AA09C /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		53F97D9626F8DA10007AA09C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Downloads/chapter-31-final/MyLocations/Assets.xcassets"; sourceTree = "<group>"; };
-		53F97D9926F8E314007AA09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Downloads/chapter-31-final/MyLocations/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		53F97D9B26F8E554007AA09C /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = "../../../Downloads/chapter-31-final/MyLocations/Sound"; sourceTree = "<group>"; };
+		53F97DA126F8F746007AA09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53F97DA326F8F885007AA09C /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +95,11 @@
 				538C58A426F829340008F511 /* LocationCell.swift */,
 				533E7D6326ED808600A33734 /* LocationDetailsViewController.swift */,
 				538C58A226F80F370008F511 /* LocationsViewController.swift */,
-				53F97D9826F8E314007AA09C /* Main.storyboard */,
+				53F97DA026F8F746007AA09C /* Main.storyboard */,
 				53F97D8D26F8B3F4007AA09C /* MapViewController.swift */,
 				538C589526F7B8790008F511 /* MyLocations.xcdatamodeld */,
 				533E7D5126ED61B800A33734 /* SceneDelegate.swift */,
-				53F97D9B26F8E554007AA09C /* Sound */,
+				53F97DA326F8F885007AA09C /* Sound */,
 				53F97D9426F8D677007AA09C /* String+AddText.swift */,
 				53F97D9226F8D4E8007AA09C /* UIImage+Resize.swift */,
 			);
@@ -163,10 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53F97D9A26F8E314007AA09C /* Main.storyboard in Resources */,
 				53F97D9726F8DA10007AA09C /* Assets.xcassets in Resources */,
-				53F97D9C26F8E554007AA09C /* Sound in Resources */,
 				533E7D5C26ED61B900A33734 /* LaunchScreen.storyboard in Resources */,
+				53F97DA426F8F885007AA09C /* Sound in Resources */,
+				53F97DA226F8F746007AA09C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +206,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		53F97D9826F8E314007AA09C /* Main.storyboard */ = {
+		53F97DA026F8F746007AA09C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				53F97D9926F8E314007AA09C /* Base */,
+				53F97DA126F8F746007AA09C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
